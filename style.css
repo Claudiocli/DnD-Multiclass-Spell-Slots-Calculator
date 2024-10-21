@@ -1,0 +1,90 @@
+body    {
+    font-family: Nunito, sans-serif;
+    color: #efefef;
+
+    background-color: #1f1f1f;
+
+    /* background-image: url('/images/Meteor.svg');
+    background-repeat: repeat; */
+    height: 100%;
+}
+h1  {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.info :not(div)    {
+    padding-left: .5em;
+}
+#equation   {
+    background-color: #bdc3c7;
+    color: #1f1f1f;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    cursor: default;
+}
+.levels-container   {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    width: 100%;
+    text-align: center;
+    place-items: center center;
+    justify-content: center;
+}
+.level, .spell  {
+    border: solid 6px #efefef;
+    border-radius: 20px;
+    padding: .5em;
+    box-shadow: 35px 30px 40px rgba(0, 0, 0, .1);
+
+    p    {
+        margin: .5em;
+    }
+    input    {
+        width: 7em;
+        text-align: center;
+        border-radius: 20px;
+    
+        appearance: tetxfield;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        margin: 0;
+    }
+}
+.level:hover    {
+    scale: 1.5;
+    cursor: pointer;
+    border-color: #D4AF37;
+    p   {
+        color:#D4AF37;
+    }
+
+    user-select: none;
+}
+.level>p:hover  {
+    cursor: pointer;
+
+    user-select: none;
+}
+.spell-container    {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    width: 100%;
+    text-align: center;
+    place-items: center center;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+.spell>input:focus    {
+    outline: none;
+}
+.spell>p:hover    {
+    cursor: default;
+    user-select: none;
+}
+.spell>input:hover    {
+    cursor: default;
+}

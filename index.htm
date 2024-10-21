@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>DnD Multiclass Spell Slots Calculator</title>
+</head>
+<body>
+    <h1>DnD Multiclass Spell Slots Calculator</h1>
+    <div class="info">
+        <h2>Calculate your 5e multiclassed character's spell slot!</h2>
+        <p data-i18n="">Insert the levels of each of your character's classes and find out how many slots your character has.</p>
+        <h3>How it works</h3>
+        <p data-i18n="">This calculator works assuming the rules of the 5e. As the manual states, for two or more magic classes you have to calculate first of all the level of your character keeping in mind that some classes get access to magic at different levels. In fact, the simple calculation is stated as follow</p>
+        <div style="display: flex; place-content: center;">
+            <p id="equation">bard + cleric + druid + sorcerer + wizzard + &#8970;paladin/2&#8971; + &#8970;ranger/2&#8971; + &#8970;fighter/3&#8971; + &#8970;rogue/3&#8971;</p>
+        </div>
+        <h5>Warlock disclaimer</h5>
+        <p data-i18n="">Warlocks are a bit special:</p>
+    </div>
+    <main>
+        <div class="levels-container">
+            <span class="level">
+                <p data-i18n="">Bard</p>
+                <input type="number" id="bard-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Cleric</p>
+                <input type="number" id="cleric-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Druid</p>
+                <input type="number" id="druid-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Sorcerer</p>
+                <input type="number" id="sorcerer-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Wizzard</p>
+                <input type="number" id="wizzard-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Paladin</p>
+                <input type="number" id="paladin-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Ranger</p>
+                <input type="number" id="ranger-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Fighter</p>
+                <input type="number" id="fighter-level" min="0" max="20" placeholder="0">
+            </span>
+            <span class="level">
+                <p data-i18n="">Rogue</p>
+                <input type="number" id="rogue-level" min="0" max="20" placeholder="0">
+            </span>
+        </div>
+        <div class="output">
+            <h1 style="margin-top: 1em; margin-bottom: .5em; text-align: center; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(to right, #FFB2B2, #FF7F7F, #FF4C4C, #FF1A1A, #FF0000, #E60000, #C70000, #A60000, #800000);">Spell Slots</h1>
+            <div class="spell-container">
+                <span class="spell" style="background-color: #FFB2B2;">
+                    <p>1st</p>
+                    <input type="number" id="bard-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #FF7F7F;">
+                    <p>2nd</p>
+                    <input type="number" id="cleric-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #ff4c4c;">
+                    <p>3rd</p>
+                    <input type="number" id="druid-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #ff1a1a;">
+                    <p>4th</p>
+                    <input type="number" id="sorcerer-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #ff0000;">
+                    <p>5th</p>
+                    <input type="number" id="wizzard-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #e60000;">
+                    <p>6th</p>
+                    <input type="number" id="paladin-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #c70000;">
+                    <p>7th</p>
+                    <input type="number" id="ranger-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #a60000;">
+                    <p>8th</p>
+                    <input type="number" id="fighter-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #800000;">
+                    <p>9th</p>
+                    <input type="number" id="rogue-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+            </div>
+            <h1 style="margin-top: 1em; margin-bottom: .5em; text-align: center; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(to right, #EAD1E8, #D8A6D2, #A65E9B, #8B2D82, #3E004C);">Warlock Spell Slots</h1>
+            <div class="spell-container">
+                <span class="spell" style="background-color: #EAD1E8;">
+                    <p>1st</p>
+                    <input type="number" id="bard-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #d8a6d2;">
+                    <p>2nd</p>
+                    <input type="number" id="cleric-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #a65e9b;">
+                    <p>3rd</p>
+                    <input type="number" id="druid-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #8b2d82;">
+                    <p>4th</p>
+                    <input type="number" id="sorcerer-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+                <span class="spell" style="background-color: #3e004c;">
+                    <p>5th</p>
+                    <input type="number" id="wizzard-level" min="0" max="20" placeholder="0" readonly>
+                </span>
+            </div>
+        </div>
+    </main>
+    <footer style="display: flex; flex-direction: row; align-items: center; gap: 80vw;">
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="C_L_I" data-color="#000000" data-emoji="☕"  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="6SN9LBM8TM2SS" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_IT/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+    </footer>
+</body>
+</html>
